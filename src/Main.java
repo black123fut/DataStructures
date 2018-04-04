@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        DoubleCircularList<Carro> lista = new DoubleCircularList<>();
+        LinkedList<Carro> lista = new LinkedList<>();
 
         args = new String[4];
         args[0] = "Nissan 0";
@@ -15,7 +15,7 @@ public class Main {
         }
         printCarros(lista);
 
-        lista.remove(3);
+        lista.remove(2);
         System.out.println("----------------------------");
         printCarros(lista);
 
@@ -23,7 +23,7 @@ public class Main {
     }
 
 
-    public static void printCarros(DoubleCircularList<Carro> carros){
+    public static void printCarros(LinkedList<Carro> carros){
         for (int i = 0; i < carros.length(); i++) {
             System.out.println(carros.get(i).getMarca());
         }
